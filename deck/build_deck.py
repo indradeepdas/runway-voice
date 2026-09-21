@@ -180,7 +180,7 @@ def s_road(sid):
 def s_close(sid):
     return [
         shape(f"{sid}_1", sid, "TEXT_BOX", 0.55, 1.85, 8.9, 0.8), text(f"{sid}_1", "Cash clarity at the speed of speech."), tstyle(f"{sid}_1", 32, WHITE, True),
-        shape(f"{sid}_2", sid, "TEXT_BOX", 0.55, 2.85, 8.9, 0.7), text(f"{sid}_2", "Domain logic by a 16-year FP&A operator (PepsiCo, Hilti, Delivery Hero).\nVoice by AssemblyAI. Built for the AssemblyAI Voice Agent Hackathon 2026."), tstyle(f"{sid}_2", 14, GREY),
+        shape(f"{sid}_2", sid, "TEXT_BOX", 0.55, 2.85, 8.9, 0.7), text(f"{sid}_2", "Domain logic by a 16-year FP&A operator (PwC, Hilti, Delivery Hero).\nVoice by AssemblyAI. Built for the AssemblyAI Voice Agent Hackathon 2026."), tstyle(f"{sid}_2", 14, GREY),
         shape(f"{sid}_3", sid, "TEXT_BOX", 0.55, 3.9, 8.9, 0.55), text(f"{sid}_3", "Runway Voice"), tstyle(f"{sid}_3", 24, ACCENT, True),
     ]
 
