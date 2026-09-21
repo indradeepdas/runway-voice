@@ -1,0 +1,33 @@
+{
+  "company": "Muster & Co. GmbH (fictional demo company)",
+  "currency": "EUR",
+  "as_of": "2026-09-21",
+  "cash_on_hand": 184500,
+  "weekly_fixed_costs": {
+    "payroll_net_and_taxes": 15800,
+    "rent_and_office": 1900,
+    "software_and_tooling": 850,
+    "insurance_and_admin": 420,
+    "misc_operating": 600
+  },
+  "receivables": [
+    {"client": "Nordwind Logistics", "amount": 42000, "due_week": 2, "probability": 0.95, "status": "confirmed"},
+    {"client": "Helios Retail Group", "amount": 28500, "due_week": 3, "probability": 0.80, "status": "overdue_risk"},
+    {"client": "Bergmann Automotive", "amount": 36000, "due_week": 5, "probability": 0.90, "status": "confirmed"},
+    {"client": "Alba Foods", "amount": 19750, "due_week": 7, "probability": 0.70, "status": "verbal_commitment"},
+    {"client": "Kontor Shipping", "amount": 52000, "due_week": 9, "probability": 0.85, "status": "contracted"}
+  ],
+  "payables": [
+    {"vendor": "Freelance bench (contractors)", "amount": 12400, "due_week": 2},
+    {"vendor": "Tax office (VAT prepayment)", "amount": 9800, "due_week": 4},
+    {"vendor": "Recruitment fee instalment", "amount": 6000, "due_week": 6},
+    {"vendor": "Annual insurance premium", "amount": 11200, "due_week": 10}
+  ],
+  "recurring_revenue_weekly": 14200,
+  "scenarios": {
+    "hire_engineer": {"description": "Hire one senior engineer at EUR 7,500/week fully loaded, starting week 3", "weekly_cost_delta": -7500, "start_week": 3},
+    "helios_pays_late": {"description": "Helios Retail pays 4 weeks late (week 7 instead of week 3)", "delay_client": "Helios Retail Group", "delay_weeks": 4},
+    "lose_alba": {"description": "Alba Foods deal falls through (EUR 19,750 never collected)", "remove_client": "Alba Foods"},
+    "cut_contractors": {"description": "End freelance bench engagement, saving EUR 3,100/week from week 2", "weekly_cost_delta": 3100, "start_week": 2}
+  }
+}
