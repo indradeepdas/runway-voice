@@ -36,4 +36,4 @@ streamlit run app.py
 ## Built for
 
 AssemblyAI Voice Agent Hackathon (lablab.ai), September 2026.
-Domain logic by a 16-year FP&A operator (PwC, Hilti, Delivery Hero). Voice by AssemblyAI.
+Domain logic by a 16-year FP&A operator (PepsiCo, Hilti, Delivery Hero). Voice by AssemblyAI.

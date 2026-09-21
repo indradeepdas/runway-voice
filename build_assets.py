@@ -167,7 +167,7 @@ slides.append(("09_roadmap", img))
 # 10 close
 img, d = new_slide()
 d.text((70, 230), "Cash clarity at the speed of speech.", font=f(52, True), fill=WHITE)
-d.text((70, 330), "Domain logic by a 16-year FP&A operator (PwC, Hilti, Delivery Hero).", font=f(26), fill=GREY)
+d.text((70, 330), "Domain logic by a 16-year FP&A operator (PepsiCo, Hilti, Delivery Hero).", font=f(26), fill=GREY)
 d.text((70, 375), "Voice by AssemblyAI. Built for the AssemblyAI Voice Agent Hackathon 2026.", font=f(26), fill=GREY)
 d.text((70, 470), "Runway Voice", font=f(40, True), fill=ACCENT)
 slides.append(("10_close", img))

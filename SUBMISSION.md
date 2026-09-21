@@ -14,7 +14,7 @@ Why AssemblyAI: Universal STT handles founder-speak - accents, long numbers, unu
 
 Business value: hundreds of millions of small businesses share the cash-visibility pain; nothing serves them at a EUR 29/month price point. The wedge expands into ledger sync (DATEV, Xero, QuickBooks), proactive weekly voice briefs, and multi-entity consolidation.
 
-Domain logic comes from a 16-year FP&A operator (PwC, Hilti, Delivery Hero). Demo data is a fictional company; all figures illustrative.
+Domain logic comes from a 16-year FP&A operator (PepsiCo, Hilti, Delivery Hero). Demo data is a fictional company; all figures illustrative.
 
 **Technology tags:** AssemblyAI, Universal STT, Python, Streamlit, voice agent, fintech, FP&A
 **Category:** Voice Agents / Fintech
