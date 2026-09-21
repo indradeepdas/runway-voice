@@ -22,4 +22,4 @@ Domain logic comes from a 16-year FP&A operator (PwC, Hilti, Delivery Hero). Dem
 **Video:** RunwayVoice_demo.mp4 (4:22, MP4)
 **Slides:** Google Slides deck (editable): https://docs.google.com/presentation/d/14ZWoW8QQS87tRKQobLRjxOl88MpwnN6MngY_ts_abz0/edit - PDF export: RunwayVoice_slides.pdf
 **Repo:** https://github.com/indradeepdas/runway-voice
-**Demo URL:** [Streamlit Community Cloud deploy - after owner approval]
+**Demo URL:** https://runway-voice-indradeep.streamlit.app/ (Streamlit Community Cloud, public)
