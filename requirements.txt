@@ -1,3 +1,3 @@
-streamlit>=1.37
-matplotlib>=3.8
-assemblyai>=1.5
+streamlit==1.64.0
+matplotlib==3.10.9
+assemblyai==1.5.5

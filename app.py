@@ -4,6 +4,8 @@ Ask by voice or text: runway, receivables, payables, burn, and what-if
 scenarios over a direct-method 13-week cash forecast. Built on AssemblyAI
 Universal speech-to-text.
 """
+import hashlib
+
 import matplotlib
 matplotlib.use("Agg")
 import matplotlib.pyplot as plt
@@ -35,25 +37,43 @@ with st.sidebar:
 
 if "history" not in st.session_state:
     st.session_state.history = []
+if "last_audio_hash" not in st.session_state:
+    st.session_state.last_audio_hash = None
+if "heard" not in st.session_state:
+    st.session_state.heard = None
 
 col_in, col_out = st.columns([1, 1])
 
 with col_in:
     st.subheader("Ask")
     audio = st.audio_input("Record a question") if hasattr(st, "audio_input") else None
-    typed = st.text_input("...or type it", placeholder="What happens if we hire an engineer?")
+    with st.form("typed_form", clear_on_submit=True):
+        typed = st.text_input("...or type it", placeholder="What happens if we hire an engineer?")
+        typed_submitted = st.form_submit_button("Ask")
+
     asked = None
+    # Process each recording exactly once: st.audio_input keeps returning the
+    # same audio on every rerun, so gate on a content hash.
     if audio is not None:
-        with open("/tmp/rv_question.wav", "wb") as f:
-            f.write(audio.read())
-        asked = transcribe("/tmp/rv_question.wav")
-        st.info(f"Heard: {asked}")
-    elif typed:
+        digest = hashlib.sha256(audio.getvalue()).hexdigest()
+        if digest != st.session_state.last_audio_hash:
+            st.session_state.last_audio_hash = digest
+            with open("/tmp/rv_question.wav", "wb") as f:
+                f.write(audio.getvalue())
+            asked = transcribe("/tmp/rv_question.wav")
+            st.session_state.heard = asked
+    # Typed input is independent of audio state and always works.
+    if typed_submitted and typed:
         asked = typed
+
+    if st.session_state.heard:
+        st.info(f"Heard: {st.session_state.heard}")
 
     if asked:
         with st.spinner("Thinking over your 13-week model..."):
-            st.session_state.history.append((asked, answer(asked, COMPANY)))
+            st.session_state.history.append(
+                (asked, answer(asked, COMPANY, st.session_state.history))
+            )
 
 with col_out:
     st.subheader("13-week cash trajectory")

@@ -20,14 +20,16 @@ Track 04 - Real-World Industry Agents: voice copilot solving a concrete operatio
 
 ## Declared pre-existing components (built Sep 21, 2026)
 - Runway Voice core: Streamlit app, AssemblyAI Universal STT voice layer, intent/scenario engine, direct-method 13-week cash model, demo dataset.
+- Session memory (follow-up questions inherit and compound the scenario under discussion).
+- Optional env-gated LLM narration layer with deterministic fallback (llm.py); numbers are always computed by the cash engine, never the LLM.
+- Eval harness: evals/run_evals.py, 25 checks incl. end-to-end Streamlit AppTest; results in evals/RESULTS.md.
 - Existing demo footage and slides.
 
 ## New work to build inside the Oct 15-20 window
-1. Persistent conversation memory: the agent remembers prior questions and cash assumptions across sessions (also engages Track 03 scoring panel overlap).
+1. Persistent memory across sessions (current memory is per-session; also engages Track 03 scoring panel overlap).
 2. Proactive weekly voice brief: one-click generation of a Monday cash briefing from the model (scripted trigger, not a scheduler).
-3. Eval harness: scripted Q&A test set with expected figures (runway, overdue invoices, hire scenario) + results table (bonus points).
-4. Failure-modes write-up finalized from real testing (draft in FAILURE_MODES.md).
-5. Submission-form texts adapted to this event (no AssemblyAI-hackathon branding).
+3. Failure-modes write-up finalized from real testing (draft in FAILURE_MODES.md).
+4. Submission-form texts adapted to this event (no AssemblyAI-hackathon branding).
 
 ## Registration (needs owner action after review)
 Register at https://hackathon.genai.works/event/open-agent-hackathon-2026 before Oct 13 00:00 UTC. One sign-up covers event + Discord + updates.

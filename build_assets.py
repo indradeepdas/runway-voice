@@ -140,7 +140,7 @@ bullets(d, [
     "Universal speech-to-text handles founder-speak: accents, numbers, company names.",
     "Fast turnaround keeps the conversation at the speed of thought - no typing, no menus.",
     "One API for the whole voice layer lets the product stay focused on the finance model.",
-    "Streaming path is ready: the same intent engine works over Universal-Streaming for real-time Q&A.",
+    "Roadmap: real-time Q&A over Universal-Streaming - the intent engine is transport-agnostic, so the same core applies.",
 ], 70, 210)
 slides.append(("07_why_aai", img))
 

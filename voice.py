@@ -1,6 +1,6 @@
 """Voice layer: AssemblyAI transcription with an offline mock mode.
 
-Real mode uses AssemblyAI's Universal model for file/stream transcription.
+Real mode uses AssemblyAI's Universal model for file-based transcription.
 Mock mode returns canned transcripts so the full pipeline runs with no API key
 (used for offline development and the pre-submission demo build).
 """
