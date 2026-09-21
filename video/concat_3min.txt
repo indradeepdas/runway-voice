@@ -1,0 +1,7 @@
+file 'seg_01_title.mp4'
+file 'seg_02_problem.mp4'
+file 'seg_03_solution.mp4'
+file 'seg_05_demo_runway.mp4'
+file 'seg_06_demo_scenario.mp4'
+file 'seg_07_why_aai.mp4'
+file 'seg_10_close_neutral.mp4'
